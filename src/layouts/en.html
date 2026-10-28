@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  {{robots}}
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#2A1E2C">
+  {{alternate}}
+  <link rel="icon" href="{{root}}assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=Readex+Pro:wght@300;400;500&display=swap">
+  <link rel="stylesheet" href="{{root}}assets/css/tokens.css">
+  <link rel="stylesheet" href="{{root}}assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="{{root}}assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="{{root}}index.html" aria-label="Brothers Consulting, home">
+        <img class="site-logo__on-dark" src="{{root}}assets/img/logo-on-dark.svg" alt="Brothers Consulting" width="183" height="46">
+        <img class="site-logo__on-light" src="{{root}}assets/img/logo.svg" alt="" width="183" height="46">
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul class="site-nav__links">
+          <li><a href="{{root}}about.html"{{current:about}}>About</a></li>
+          <li><a href="{{root}}services.html"{{current:services}}>Services</a></li>
+        </ul>
+        {{langMenu}}
+        <a class="btn btn--sm" href="{{root}}contact.html"{{current:contact}}>Get in touch</a>
+      </nav>
+      <div class="header-tools">
+        {{langMenu}}
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-open-label="Menu" data-close-label="Close">
+          <span class="menu-toggle__bars" aria-hidden="true"></span>
+          <span class="menu-toggle__label">Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile">
+      <ul class="mobile-menu__links">
+        <li><a href="{{root}}index.html"{{current:home}}>Home</a></li>
+        <li><a href="{{root}}about.html"{{current:about}}>About</a></li>
+        <li><a href="{{root}}services.html"{{current:services}}>Services</a></li>
+        <li><a href="{{root}}contact.html"{{current:contact}}>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot">
+      {{langMobile}}
+      <a class="btn btn--light" href="{{root}}contact.html">Get in touch</a>
+    </div>
+  </div>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="qfoot">
+        <p class="qfoot__statement">Consulting, based in Bahrain.</p>
+        <nav class="qfoot__card" aria-label="Footer">
+          <a href="{{root}}index.html">Home {{icon:arrow}}</a>
+          <a href="{{root}}about.html">About {{icon:arrow}}</a>
+          <a href="{{root}}services.html">Services {{icon:arrow}}</a>
+          <a href="{{root}}contact.html">Contact {{icon:arrow}}</a>
+        </nav>
+      </div>
+      <div class="qfoot__meta">
+        <p>{{address}}, Kingdom of Bahrain</p>
+        <p>CR No. {{cr}}</p>
+        <p>© <span data-year>2026</span> Brothers Consulting Company W.L.L. All rights reserved.</p>
+        {{legalLinks}}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

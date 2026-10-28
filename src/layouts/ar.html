@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  {{robots}}
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_BH">
+  <meta name="theme-color" content="#2A1E2C">
+  {{alternate}}
+  <link rel="icon" href="{{root}}assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@700&family=Readex+Pro:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{{root}}assets/css/tokens.css">
+  <link rel="stylesheet" href="{{root}}assets/css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="{{root}}assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="site-logo" href="{{root}}ar/index.html" aria-label="Brothers Consulting، الصفحة الرئيسية">
+        <img class="site-logo__on-dark" src="{{root}}assets/img/logo-on-dark.svg" alt="Brothers Consulting" width="183" height="46">
+        <img class="site-logo__on-light" src="{{root}}assets/img/logo.svg" alt="" width="183" height="46">
+      </a>
+      <nav class="site-nav" aria-label="القائمة الرئيسية">
+        <ul class="site-nav__links">
+          <li><a href="{{root}}ar/about.html"{{current:about}}>من نحن</a></li>
+          <li><a href="{{root}}ar/services.html"{{current:services}}>خدماتنا</a></li>
+        </ul>
+        {{langMenu}}
+        <a class="btn btn--sm" href="{{root}}ar/contact.html"{{current:contact}}>تواصل معنا</a>
+      </nav>
+      <div class="header-tools">
+        {{langMenu}}
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-open-label="القائمة" data-close-label="إغلاق">
+          <span class="menu-toggle__bars" aria-hidden="true"></span>
+          <span class="menu-toggle__label">القائمة</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="القائمة">
+      <ul class="mobile-menu__links">
+        <li><a href="{{root}}ar/index.html"{{current:home}}>الرئيسية</a></li>
+        <li><a href="{{root}}ar/about.html"{{current:about}}>من نحن</a></li>
+        <li><a href="{{root}}ar/services.html"{{current:services}}>خدماتنا</a></li>
+        <li><a href="{{root}}ar/contact.html"{{current:contact}}>تواصل معنا</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__foot">
+      {{langMobile}}
+      <a class="btn btn--light" href="{{root}}ar/contact.html">تواصل معنا</a>
+    </div>
+  </div>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <footer class="site-footer on-dark">
+    <div class="container">
+      <div class="qfoot">
+        <p class="qfoot__statement">استشارات، من مملكة البحرين.</p>
+        <nav class="qfoot__card" aria-label="تذييل الصفحة">
+          <a href="{{root}}ar/index.html">الرئيسية {{icon:arrow}}</a>
+          <a href="{{root}}ar/about.html">من نحن {{icon:arrow}}</a>
+          <a href="{{root}}ar/services.html">خدماتنا {{icon:arrow}}</a>
+          <a href="{{root}}ar/contact.html">تواصل معنا {{icon:arrow}}</a>
+        </nav>
+      </div>
+      <div class="qfoot__meta">
+        <p>{{address}}، مملكة البحرين</p>
+        <p>سجل تجاري رقم <bdi>{{cr}}</bdi></p>
+        <p>© <span data-year>2026</span> <bdi>Brothers Consulting Company W.L.L</bdi>. جميع الحقوق محفوظة.</p>
+        {{legalLinks}}
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

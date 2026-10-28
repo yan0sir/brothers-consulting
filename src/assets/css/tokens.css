@@ -1,0 +1,89 @@
+/* Design tokens — Brothers Consulting. Source of truth: docs/design-system.md
+   v3: dark plum hero with oversized headline; two typefaces only; no divider lines —
+   structure comes from spacing, tonal surfaces and soft cards. */
+:root {
+  /* Brand */
+  --plum-950: #1F1621;
+  --plum-900: #2A1E2C;
+  --plum-800: #3D2C3F;
+  --plum-700: #49354B;  /* logo colour: the main brand colour */
+  --plum-600: #5A435C;
+  --plum-500: #6E5670;
+  --plum-400: #8A7290;
+  --plum-300: #A894A6;
+  --plum-200: #D9CED8;
+  --plum-100: #EAE3E9;
+  --plum-50:  #F4F0F3;
+
+  /* Neutrals: cool, plum-biased */
+  --paper: #F7F5F6;
+  --surface: #FFFFFF;
+  --stone: #EEEAED;
+  --ink:       #1E1720;
+  --ink-soft:  #3B333D;
+  --ink-muted: #675D69;
+
+  /* Accent: tints of the brand plum only, no second hue */
+  --lilac:      #CDB8D1;  /* numbers, tags, light trail on plum-700: 6.0:1 */
+  --lilac-soft: #E3D7E5;  /* on plum-700: 8.0:1 */
+  --accent-ink: #6E5670;  /* accent text on paper: 6.0:1 */
+
+  /* States */
+  --focus: #7C4D86;
+
+  /* Semantic */
+  --bg: var(--paper);
+  --text: var(--ink-soft);
+  --text-heading: var(--ink);
+  --text-inverse: #F7F5F6;
+  --text-inverse-soft: rgb(247 245 246 / 0.72);
+  --text-inverse-muted: rgb(247 245 246 / 0.55);
+
+  /* Typography: two families only */
+  --font-head: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Readex Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-mega: clamp(calc(2.75rem - 5px), calc(0.6rem + 6.4vw - 5px), calc(7.25rem - 5px));
+  --fs-display: clamp(calc(2.25rem - 5px), calc(1rem + 4vw - 5px), calc(4.75rem - 5px));
+  --fs-h1: clamp(calc(2rem - 5px), calc(1.2rem + 2.6vw - 5px), calc(3.5rem - 5px));
+  --fs-h2: clamp(1.625rem, 1.2rem + 1.4vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 1.05rem + 0.7vw, 1.625rem);
+  --fs-statement: clamp(1.875rem, 1.1rem + 2.6vw, 3.5rem);
+  --fs-lead: clamp(1.0625rem, 1rem + 0.35vw, 1.25rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-tag: 0.75rem;
+
+  /* Spacing (4px base) */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+  --space-9: 96px; --space-10: 128px;
+  --section-pad: clamp(4.5rem, 3rem + 5vw, 8.5rem);
+
+  /* Layout */
+  --content-max: 1320px;
+  --gutter-inline: max(20px, min(4vw, 56px));
+  --gap: clamp(12px, 1.4vw, 20px);
+  --header-h: 76px;
+
+  /* Shape: rounded, echoing the logo mark */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgb(42 30 44 / 0.04), 0 8px 24px -12px rgb(42 30 44 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(42 30 44 / 0.06), 0 24px 48px -20px rgb(42 30 44 / 0.35);
+  --shadow-pop: 0 16px 40px -12px rgb(31 22 33 / 0.35);
+
+  /* Motion */
+  --dur-fast: 150ms;
+  --dur-base: 260ms;
+  --dur-slow: 700ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:lang(ar) {
+  --font-head: "Readex Pro", Tahoma, sans-serif;
+  --font-body: "Readex Pro", Tahoma, sans-serif;
+  --fs-body: 1.0625rem;
+}

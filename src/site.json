@@ -1,0 +1,12 @@
+{
+  "_note": "Site settings. Values containing [[...]] render as visible placeholders. Run tools/build.ps1 after editing. Email, WhatsApp and phone were removed from the site at the client's request.",
+  "address": {
+    "en": "[[OFFICE ADDRESS]]",
+    "ar": "[[عنوان المكتب]]"
+  },
+  "mapsUrl": "",
+  "cr": "[[CR NUMBER]]",
+  "showArabic": true,
+  "showLanguageMenu": true,
+  "showLegal": false
+}
